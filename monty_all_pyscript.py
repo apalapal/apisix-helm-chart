@@ -61,7 +61,7 @@ def monty_all(event):
 
   runtime = round(end - start, 4)
 
-  displayText = "\nNumber of shows simulated: " + str(n) + "\n" + "Average of hits changing selected door: " + str(round(acertou_mudandoporta / n * 100, 3 )) + "%" + "\n" + "Average of hits keeping selected door: " + str(round( acertou_mantendoporta / n * 100, 3 )) + "%" + "\n\n" + "Simulation runtime: " + str(runtime) + " (s)"
+  displayText = "\nNumber of shows simulated: " + "<b>" + str(n) + "</b>" + "\n" + "Hits avg changing selected door: " + "<b>" + str(round(acertou_mudandoporta / n * 100, 3 )) + "%" + "</b>" + "\n" + "<b>" + "Hits avg keeping selected door: " + str(round( acertou_mantendoporta / n * 100, 3 )) + "%" + "</b>" + "\n\n" + "Simulation runtime: " + "<b>" + str(runtime) + " (s)" + "</b>"
 
   output_div = document.querySelector("#output")
   output_div.innerText = displayText
