@@ -1,4 +1,5 @@
 import random
+import time
 from pyscript import document
 
 # Programa python feito por Helena e Antonio para verificar estatisticamente a solucao do paradoxo Monty Hall
@@ -19,6 +20,8 @@ def monty_all(event):
   acertou_mudandoporta = 0
   # Numero de vezes que se acertou na porta do carro quando concorrent não muda de porta
   acertou_mantendoporta = 0
+
+  start = time.time()
 
   for i in range(n):
   
@@ -50,11 +53,15 @@ def monty_all(event):
     if primeira_escolha == carro_porta:
       acertou_mantendoporta = acertou_mantendoporta + 1
   
+  end = time.time()
+
   #print("Numero de concursos", n)
   #print("% media de acertos mudando porta", round(acertou_mudandoporta / n * 100, 3 ) )
   #print("% media de acertos mantendo porta", round( acertou_mantendoporta / n * 100, 3 ) )
 
-  displayText = "\nNumero de concursos: " + str(n) + "\n" + "% media de acertos mudando porta: " + str(round(acertou_mudandoporta / n * 100, 3 )) + "\n" + "% media de acertos mantendo porta: " + str(round( acertou_mantendoporta / n * 100, 3 ))
+  runtime = end - start
+
+  displayText = "\nNumber of shows simulated: " + str(n) + "\n" + "% average of hits changing selected door: " + str(round(acertou_mudandoporta / n * 100, 3 )) + "\n" + "% average of hits keeping selected door: " + str(round( acertou_mantendoporta / n * 100, 3 )) + "\n\n" + "Total runtime: " + str(runtime) + " (s)"
 
   output_div = document.querySelector("#output")
   output_div.innerText = displayText
