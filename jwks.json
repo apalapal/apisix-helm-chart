@@ -6,7 +6,8 @@
             "kid": "5a752e00-687f-4df7-9511-2805b328230b",
             "x": "lXN6_ffhgxqp6pHBla5XfSp0NOJ1Ljsr7Kv052sW1sQ",
             "y": "FiJl1LFj6nT29mFNWyVd89ib1Z4fktgx-Z7leaSYO0Q",
-            "alg": "ES256"
+            "alg": "ES256",
+            "use": "sig"
         }
     ]
 }
